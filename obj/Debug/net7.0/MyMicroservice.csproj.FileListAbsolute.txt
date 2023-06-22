@@ -1,0 +1,7 @@
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.csproj.AssemblyReference.cache
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.GeneratedMSBuildEditorConfig.editorconfig
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.AssemblyInfoInputs.cache
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.AssemblyInfo.cs
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.csproj.CoreCompileInputs.cache
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.MvcApplicationPartsAssemblyInfo.cs
+/media/talita/2FA14583304778311/MyMicroservice/obj/Debug/net7.0/MyMicroservice.MvcApplicationPartsAssemblyInfo.cache
