@@ -1,6 +1,10 @@
-public class MyActionFilter : IActionFilter
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+namespace MyMicroservice.Filters {
+    public class MyActionFilter : IActionFilter
 {
-    private Stopwatch stopwatch;
+    private Stopwatch? stopwatch;
 
     public void OnActionExecuting(ActionExecutingContext context)
     {
@@ -13,3 +17,5 @@ public class MyActionFilter : IActionFilter
         Console.WriteLine($"Ação executada em: {stopwatch.ElapsedMilliseconds} ms");
     }
 }
+}
+

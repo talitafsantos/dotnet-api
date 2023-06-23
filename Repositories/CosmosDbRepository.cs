@@ -1,18 +1,21 @@
-public class CosmosDbRepository : IRepository
+using Microsoft.Azure.Cosmos;
+using MyMicroservice.Models;
+
+namespace MyMicroservice.Repositories
 {
-    private readonly CosmosClient _cosmosClient;
-
-    public CosmosDbRepository(CosmosClient cosmosClient)
+    public class CosmosDbRepository : IRepository
     {
-        _cosmosClient = cosmosClient;
-    }
+        private readonly CosmosClient _cosmosClient;
 
-    public async Task Save(MyObjectDto dto)
-    {
-        var container = _cosmosClient.GetContainer("MyData", "Mycontainer"); // Substitua "databaseId" e "containerId" pelos seus próprios valores.
+        public CosmosDbRepository(CosmosClient cosmosClient)
+        {
+            _cosmosClient = cosmosClient;
+        }
 
-        var itemResponse = await container.CreateItemAsync(dto);
-
-        // Faça algo com itemResponse, se necessário.
+        public async Task Save(MyObjectDto dto)
+        {
+            var container = _cosmosClient.GetContainer("MyData", "Mycontainer");
+            await container.CreateItemAsync(dto);
+        }
     }
 }

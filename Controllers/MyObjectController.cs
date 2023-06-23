@@ -1,23 +1,34 @@
-[ApiController]
-[Route("[controller]")]
-public class MyObjectController : ControllerBase
-{
-    private readonly IRepository _repository;
-    private readonly ITopicClient _topicClient;
 
-    public MyObjectController(IRepository repository, ITopicClient topicClient)
+using System.Text;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.ServiceBus;
+using MyMicroservice.Models;
+using Newtonsoft.Json;
+
+namespace MyMicroservice.Controllers {
+    
+    [ApiController]
+    [Route("[controller]")]
+    public class MyObjectController : ControllerBase
     {
-        _repository = repository;
-        _topicClient = topicClient;
+        private readonly IRepository _repository;
+        private readonly ITopicClient _topicClient;
+
+        public MyObjectController(IRepository repository, ITopicClient topicClient)
+        {
+            _repository = repository;
+            _topicClient = topicClient;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(MyObjectDto dto)
+        {
+            await _repository.Save(dto);
+            var message = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(dto)));
+            await _topicClient.SendAsync(message);
+
+            return Ok();
+        }
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Post(MyObjectDto dto)
-    {
-        await _repository.Save(dto);
-        var message = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(dto)));
-        await _topicClient.SendAsync(message);
-
-        return Ok();
-    }
 }

@@ -1,11 +1,13 @@
-public class MyObjectDto
+namespace MyMicroservice.Models {
+    public class MyObjectDto
 {
-    public string Id { get; set; }
-    public string Name { get; set; }
-    // Adicione outros campos conforme necessário
+    public required string Id { get; set; }
+    public required string Name { get; set; }
 }
 
 public interface IRepository
 {
     Task Save(MyObjectDto dto);
 }
+}
+

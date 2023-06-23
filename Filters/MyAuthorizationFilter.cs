@@ -1,7 +1,16 @@
-public class MyAuthorizationFilter : IAuthorizationFilter
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+namespace MyMicroservice.Filters {
+    public class MyAuthorizationFilter : IAuthorizationFilter
 {
     public void OnAuthorization(AuthorizationFilterContext context)
     {
+        if (context == null) 
+        {
+            throw new ArgumentNullException(nameof(context));
+        }
+        
         string authHeader = context.HttpContext.Request.Headers["Authorization"];
 
         if (string.IsNullOrEmpty(authHeader))
@@ -17,4 +26,6 @@ public class MyAuthorizationFilter : IAuthorizationFilter
             }
         }
     }
+}
+
 }

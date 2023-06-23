@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/media/talita/2FA14583304778311/MyMicroservice/MyMicroservice.csproj": {}
+    "C:\\Users\\talita\\Documents\\MyMicroservice\\MyMicroservice.csproj": {}
   },
   "projects": {
-    "/media/talita/2FA14583304778311/MyMicroservice/MyMicroservice.csproj": {
+    "C:\\Users\\talita\\Documents\\MyMicroservice\\MyMicroservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/talita/2FA14583304778311/MyMicroservice/MyMicroservice.csproj",
+        "projectUniqueName": "C:\\Users\\talita\\Documents\\MyMicroservice\\MyMicroservice.csproj",
         "projectName": "MyMicroservice",
-        "projectPath": "/media/talita/2FA14583304778311/MyMicroservice/MyMicroservice.csproj",
-        "packagesPath": "/home/talita/.nuget/packages/",
-        "outputPath": "/media/talita/2FA14583304778311/MyMicroservice/obj/",
+        "projectPath": "C:\\Users\\talita\\Documents\\MyMicroservice\\MyMicroservice.csproj",
+        "packagesPath": "C:\\Users\\talita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\talita\\Documents\\MyMicroservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/talita/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\talita\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/snap/dotnet-sdk/210/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/210/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

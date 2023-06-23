@@ -1,4 +1,9 @@
-public interface IRepository
+using MyMicroservice.Models;
+
+namespace MyMicroservice.Repositories
 {
-    Task Save(MyObjectDto dto);
+    public interface IRepository
+    {
+        Task Save(MyObjectDto dto);
+    }
 }
